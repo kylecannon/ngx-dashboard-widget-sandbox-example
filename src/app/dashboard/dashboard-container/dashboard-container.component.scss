@@ -1,0 +1,59 @@
+:host {
+  display: grid;
+  grid-gap: 40px;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 720px) {
+  :host {
+    grid-template-areas: "sidenav widgets" "root-state root-state";
+    grid-template-columns: 200px 1fr;
+  }
+  .widgets {
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-rows: repeat(auto-fill, 550px);
+  }
+}
+
+@media (max-width: 720px) {
+  :host {
+    grid-template-areas: "sidenav" "root-state" "widgets";
+    grid-template-rows: 1fr;
+  }
+  .widgets {
+    grid-template-rows: repeat(auto-fill, 550px);
+    padding: 10px;
+  }
+}
+
+.sidenav {
+  padding: 0 10px;
+  grid-area: sidenav;
+
+  h3 {
+    text-align: center;
+  }
+}
+
+.widget-list {
+  margin-left: 10px;
+}
+
+.widget-button {
+  margin-top: 10px;
+  align-self: center;
+  width: 100%;
+}
+
+.widgets {
+  display: grid;
+
+  grid-gap: 1em;
+  grid-area: widgets;
+}
+
+.root-state {
+  grid-area: root-state;
+  margin-top: 20px;
+}

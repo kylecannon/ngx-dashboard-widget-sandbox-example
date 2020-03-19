@@ -1,0 +1,14 @@
+<h3>Widget A</h3>
+<a routerLink="/first">First Route</a>
+<br>
+<a routerLink="/second">Second Route</a>
+
+<router-outlet></router-outlet>
+
+
+<app-widget-a-counter></app-widget-a-counter>
+
+<div class="current-state">
+  Current State:
+  <pre>{{store$ | async | json}}</pre>
+</div>
