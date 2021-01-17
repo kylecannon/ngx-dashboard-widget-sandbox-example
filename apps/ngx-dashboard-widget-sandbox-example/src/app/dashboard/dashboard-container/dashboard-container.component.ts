@@ -1,9 +1,8 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {AvailableWidgets, WidgetRegistration} from '../widget-map';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { AvailableWidgets, WidgetRegistration } from '../widget-map';
 import * as uuid from 'uuid';
-import {Store} from '@ngrx/store';
-import {State} from '../../reducers';
-
+import { Store } from '@ngrx/store';
+import { State } from '../../reducers';
 
 interface WidgetMap {
   [uuid: string]: WidgetRegistration;
@@ -16,17 +15,22 @@ interface WidgetMap {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DashboardContainerComponent {
-  readonly widgetMap = AvailableWidgets.reduce((acc, widget) => ({
-    ...acc,
-    [widget.name]: widget
-  }), {});
-  widgets: WidgetMap = AvailableWidgets.reduce((acc, widget) => ({
-    ...acc,
-    [uuid.v4()]: widget,
-  }), {});
+  readonly widgetMap = AvailableWidgets.reduce(
+    (acc, widget) => ({
+      ...acc,
+      [widget.name]: widget,
+    }),
+    {}
+  );
+  widgets: WidgetMap = AvailableWidgets.reduce(
+    (acc, widget) => ({
+      ...acc,
+      [uuid.v4()]: widget,
+    }),
+    {}
+  );
 
-  constructor(public store$: Store<State>) {
-  }
+  constructor(public store$: Store<State>) {}
 
   trackByIdx(idx: number) {
     return idx;
@@ -44,8 +48,7 @@ export class DashboardContainerComponent {
   }
 
   removeWidget(key: string) {
-    const {[key]: removedWidget, ...widgets} = this.widgets;
+    const { [key]: removedWidget, ...widgets } = this.widgets;
     this.widgets = widgets;
   }
-
 }

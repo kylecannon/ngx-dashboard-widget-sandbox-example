@@ -1,4 +1,4 @@
-import {createReducer, on} from '@ngrx/store';
+import { createReducer, on } from '@ngrx/store';
 import * as CounterActions from '../actions/counter.actions';
 
 export interface State {
@@ -11,6 +11,12 @@ export const initialState: State = {
 
 export const counterReducer = createReducer(
   initialState,
-  on(CounterActions.incrementCount, state => ({...state, count: state.count + 1})),
-  on(CounterActions.decrementCount, state => ({...state, count: state.count - 1})),
+  on(CounterActions.incrementCount, (state) => ({
+    ...state,
+    count: state.count + 1,
+  })),
+  on(CounterActions.decrementCount, (state) => ({
+    ...state,
+    count: state.count - 1,
+  }))
 );

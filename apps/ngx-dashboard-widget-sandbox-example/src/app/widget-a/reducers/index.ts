@@ -1,20 +1,18 @@
-import {
-  ActionReducerMap,
-  MetaReducer
-} from '@ngrx/store';
-import {environment} from '../../../environments/environment';
-import {counterReducer, State as CounterState} from './counter.reducer';
-import {routerReducer} from '@ngrx/router-store';
+import { ActionReducerMap, MetaReducer } from '@ngrx/store';
+import { environment } from '../../../environments/environment';
+import { counterReducer, State as CounterState } from './counter.reducer';
+import { routerReducer } from '@ngrx/router-store';
 
 export interface State {
-  counter: CounterState
+  counter: CounterState;
   router: any;
 }
 
 export const reducers: ActionReducerMap<State> = {
   counter: counterReducer,
-  router: routerReducer
+  router: routerReducer,
 };
 
-
-export const metaReducers: MetaReducer<State>[] = !environment.production ? [] : [];
+export const metaReducers: MetaReducer<State>[] = !environment.production
+  ? []
+  : [];

@@ -1,17 +1,18 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import {WidgetAFirstRouteComponent} from './widget-a-first-route.component';
+import { WidgetAFirstRouteComponent } from './widget-a-first-route.component';
 
 describe('WidgetAFirstRouteComponent', () => {
   let component: WidgetAFirstRouteComponent;
   let fixture: ComponentFixture<WidgetAFirstRouteComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [WidgetAFirstRouteComponent]
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [WidgetAFirstRouteComponent],
+      }).compileComponents();
     })
-      .compileComponents();
-  }));
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(WidgetAFirstRouteComponent);

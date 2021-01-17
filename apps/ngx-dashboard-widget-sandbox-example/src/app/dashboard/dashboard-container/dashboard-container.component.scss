@@ -7,7 +7,7 @@
 
 @media (min-width: 720px) {
   :host {
-    grid-template-areas: "sidenav widgets" "root-state root-state";
+    grid-template-areas: 'sidenav widgets' 'root-state root-state';
     grid-template-columns: 200px 1fr;
   }
   .widgets {
@@ -18,7 +18,7 @@
 
 @media (max-width: 720px) {
   :host {
-    grid-template-areas: "sidenav" "root-state" "widgets";
+    grid-template-areas: 'sidenav' 'root-state' 'widgets';
     grid-template-rows: 1fr;
   }
   .widgets {

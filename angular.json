@@ -105,9 +105,7 @@
               "apps/ngx-dashboard-widget-sandbox-example/tsconfig.app.json",
               "apps/ngx-dashboard-widget-sandbox-example/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -132,9 +130,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/ngx-dashboard-widget-sandbox-example-e2e/tsconfig.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }

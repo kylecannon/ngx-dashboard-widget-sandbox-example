@@ -1,10 +1,10 @@
+import { ActionReducerMap, MetaReducer } from '@ngrx/store';
+import { environment } from '../../../environments/environment';
 import {
-  ActionReducerMap,
-  MetaReducer
-} from '@ngrx/store';
-import {environment} from '../../../environments/environment';
-import {scoreboardReducer, State as ScoreboardState} from './scoreboard.reducer';
-import {routerReducer} from '@ngrx/router-store';
+  scoreboardReducer,
+  State as ScoreboardState,
+} from './scoreboard.reducer';
+import { routerReducer } from '@ngrx/router-store';
 
 export interface State {
   scoreboard: ScoreboardState;
@@ -13,8 +13,9 @@ export interface State {
 
 export const reducers: ActionReducerMap<State> = {
   scoreboard: scoreboardReducer,
-  router: routerReducer
+  router: routerReducer,
 };
 
-
-export const metaReducers: MetaReducer<State>[] = !environment.production ? [] : [];
+export const metaReducers: MetaReducer<State>[] = !environment.production
+  ? []
+  : [];

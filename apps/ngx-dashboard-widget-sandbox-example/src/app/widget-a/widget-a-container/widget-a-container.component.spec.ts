@@ -1,17 +1,18 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import {WidgetAContainerComponent} from './widget-a-container.component';
+import { WidgetAContainerComponent } from './widget-a-container.component';
 
 describe('WidgetAContainerComponent', () => {
   let component: WidgetAContainerComponent;
   let fixture: ComponentFixture<WidgetAContainerComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [WidgetAContainerComponent]
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [WidgetAContainerComponent],
+      }).compileComponents();
     })
-      .compileComponents();
-  }));
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(WidgetAContainerComponent);

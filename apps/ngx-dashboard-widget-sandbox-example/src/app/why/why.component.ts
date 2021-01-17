@@ -1,16 +1,12 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-why',
   templateUrl: './why.component.html',
-  styleUrls: ['./why.component.scss']
+  styleUrls: ['./why.component.scss'],
 })
 export class WhyComponent implements OnInit {
+  constructor() {}
 
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

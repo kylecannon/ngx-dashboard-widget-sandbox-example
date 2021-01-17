@@ -1,7 +1,7 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {select, Store} from '@ngrx/store';
-import {State} from '../reducers';
-import {decrementCount, incrementCount} from '../actions/counter.actions';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { select, Store } from '@ngrx/store';
+import { State } from '../reducers';
+import { decrementCount, incrementCount } from '../actions/counter.actions';
 
 @Component({
   selector: 'app-widget-a-counter',
@@ -10,10 +10,9 @@ import {decrementCount, incrementCount} from '../actions/counter.actions';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WidgetACounterComponent {
-  count$ = this.store$.pipe(select(state => state.counter.count));
+  count$ = this.store$.pipe(select((state) => state.counter.count));
 
-  constructor(private store$: Store<State>) {
-  }
+  constructor(private store$: Store<State>) {}
 
   incrementCount() {
     this.store$.dispatch(incrementCount());
@@ -22,6 +21,4 @@ export class WidgetACounterComponent {
   decrementCount() {
     this.store$.dispatch(decrementCount());
   }
-
-
 }

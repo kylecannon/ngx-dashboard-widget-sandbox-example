@@ -1,6 +1,5 @@
-import {LocationChangeListener, PlatformLocation} from '@angular/common';
-import {Injectable} from '@angular/core';
-
+import { LocationChangeListener, PlatformLocation } from '@angular/common';
+import { Injectable } from '@angular/core';
 
 @Injectable()
 export class WidgetPlatformLocation implements PlatformLocation {
@@ -12,11 +11,9 @@ export class WidgetPlatformLocation implements PlatformLocation {
   readonly protocol: string = '';
   readonly search: string = '';
 
-  back(): void {
-  }
+  back(): void {}
 
-  forward(): void {
-  }
+  forward(): void {}
 
   getBaseHrefFromDOM(): string {
     return '';
@@ -26,16 +23,11 @@ export class WidgetPlatformLocation implements PlatformLocation {
     return undefined;
   }
 
-  onHashChange(fn: LocationChangeListener): void {
-  }
+  onHashChange(fn: LocationChangeListener): void {}
 
-  onPopState(fn: LocationChangeListener): void {
-  }
+  onPopState(fn: LocationChangeListener): void {}
 
-  pushState(state: any, title: string, url: string): void {
-  }
+  pushState(state: any, title: string, url: string): void {}
 
-  replaceState(state: any, title: string, url: string): void {
-  }
-
+  replaceState(state: any, title: string, url: string): void {}
 }
