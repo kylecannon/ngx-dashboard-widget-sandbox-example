@@ -1,0 +1,22 @@
+{
+  "npmScope": "ngx-dashboard-widget-sandbox-example",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*",
+    "tsconfig.base.json": "*"
+  },
+  "projects": {
+    "ngx-dashboard-widget-sandbox-example": {
+      "tags": []
+    },
+    "ngx-dashboard-widget-sandbox-example-e2e": {
+      "tags": []
+    }
+  }
+}
