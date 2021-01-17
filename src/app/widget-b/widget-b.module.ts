@@ -34,7 +34,7 @@ const routes: Route[] = [
   imports: [
     CommonModule,
     MatButtonModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
     StoreModule.forRoot(reducers, {
       metaReducers,
       runtimeChecks: {
