@@ -1,4 +1,4 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import {WhyComponent} from './why.component';
 
@@ -6,7 +6,7 @@ describe('WhyComponent', () => {
   let component: WhyComponent;
   let fixture: ComponentFixture<WhyComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [WhyComponent]
     })

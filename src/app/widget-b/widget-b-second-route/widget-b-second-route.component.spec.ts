@@ -1,4 +1,4 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import {WidgetBSecondRouteComponent} from './widget-b-second-route.component';
 
@@ -6,7 +6,7 @@ describe('WidgetBSecondRouteComponent', () => {
   let component: WidgetBSecondRouteComponent;
   let fixture: ComponentFixture<WidgetBSecondRouteComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [WidgetBSecondRouteComponent]
     })
