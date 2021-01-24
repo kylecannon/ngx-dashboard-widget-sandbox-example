@@ -105,9 +105,7 @@
               "apps/ngx-dashboard-widget-sandbox-example/tsconfig.app.json",
               "apps/ngx-dashboard-widget-sandbox-example/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -132,9 +130,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/ngx-dashboard-widget-sandbox-example-e2e/tsconfig.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -158,9 +154,7 @@
               "apps/mfe-app/src/favicon.ico",
               "apps/mfe-app/src/assets"
             ],
-            "styles": [
-              "apps/mfe-app/src/styles.scss"
-            ],
+            "styles": ["apps/mfe-app/src/styles.scss"],
             "scripts": [],
             "extraWebpackConfig": "apps/mfe-app/webpack.config.js"
           },
@@ -223,17 +217,12 @@
               "apps/mfe-app/tsconfig.spec.json",
               "apps/mfe-app/tsconfig.editor.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/mfe-app/**/*"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/mfe-app/**/*"]
           }
         },
         "test": {
           "builder": "ngx-build-plus:karma",
-          "outputs": [
-            "coverage/apps/mfe-app"
-          ],
+          "outputs": ["coverage/apps/mfe-app"],
           "options": {
             "jestConfig": "apps/mfe-app/jest.config.js",
             "passWithNoTests": true,
@@ -263,13 +252,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/mfe-app-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/mfe-app-e2e/**/*"
-            ]
+            "tsConfig": ["apps/mfe-app-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/mfe-app-e2e/**/*"]
           }
         }
       }
@@ -293,9 +277,7 @@
               "apps/mfe-widget-a/src/favicon.ico",
               "apps/mfe-widget-a/src/assets"
             ],
-            "styles": [
-              "apps/mfe-widget-a/src/styles.scss"
-            ],
+            "styles": ["apps/mfe-widget-a/src/styles.scss"],
             "scripts": [],
             "extraWebpackConfig": "apps/mfe-widget-a/webpack.config.js"
           },
@@ -358,17 +340,12 @@
               "apps/mfe-widget-a/tsconfig.spec.json",
               "apps/mfe-widget-a/tsconfig.editor.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/mfe-widget-a/**/*"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/mfe-widget-a/**/*"]
           }
         },
         "test": {
           "builder": "ngx-build-plus:karma",
-          "outputs": [
-            "coverage/apps/mfe-widget-a"
-          ],
+          "outputs": ["coverage/apps/mfe-widget-a"],
           "options": {
             "jestConfig": "apps/mfe-widget-a/jest.config.js",
             "passWithNoTests": true,
@@ -398,13 +375,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/mfe-widget-a-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/mfe-widget-a-e2e/**/*"
-            ]
+            "tsConfig": ["apps/mfe-widget-a-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/mfe-widget-a-e2e/**/*"]
           }
         }
       }
@@ -428,9 +400,7 @@
               "apps/mfe-widget-b/src/favicon.ico",
               "apps/mfe-widget-b/src/assets"
             ],
-            "styles": [
-              "apps/mfe-widget-b/src/styles.scss"
-            ],
+            "styles": ["apps/mfe-widget-b/src/styles.scss"],
             "scripts": [],
             "extraWebpackConfig": "apps/mfe-widget-b/webpack.config.js"
           },
@@ -493,17 +463,12 @@
               "apps/mfe-widget-b/tsconfig.spec.json",
               "apps/mfe-widget-b/tsconfig.editor.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/mfe-widget-b/**/*"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/mfe-widget-b/**/*"]
           }
         },
         "test": {
           "builder": "ngx-build-plus:karma",
-          "outputs": [
-            "coverage/apps/mfe-widget-b"
-          ],
+          "outputs": ["coverage/apps/mfe-widget-b"],
           "options": {
             "jestConfig": "apps/mfe-widget-b/jest.config.js",
             "passWithNoTests": true,
@@ -533,13 +498,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/mfe-widget-b-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/mfe-widget-b-e2e/**/*"
-            ]
+            "tsConfig": ["apps/mfe-widget-b-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/mfe-widget-b-e2e/**/*"]
           }
         }
       }
