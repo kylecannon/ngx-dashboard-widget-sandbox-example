@@ -18,11 +18,11 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       // For remotes (please adjust)
-      // name: "mfe-widget-b",
-      // filename: "remoteEntry.js",
-      // exposes: {
-      //     './Component': './apps/mfe-widget-b/src/app/app.component.ts',
-      // },
+      name: 'mfe_widget_b',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './Module': './apps/mfe-widget-b/src/app/mfe-app.module.ts',
+      },
 
       // For hosts (please adjust)
       // remotes: {

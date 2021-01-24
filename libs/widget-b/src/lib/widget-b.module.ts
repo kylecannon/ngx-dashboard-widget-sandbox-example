@@ -1,39 +1,38 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { WidgetAContainerComponent } from './widget-a-container/widget-a-container.component';
-import { WidgetAFirstRouteComponent } from './widget-a-first-route/widget-a-first-route.component';
-import { WidgetASecondRouteComponent } from './widget-a-second-route/widget-a-second-route.component';
+import { WidgetBContainerComponent } from './widget-b-container/widget-b-container.component';
+import { WidgetBFirstRouteComponent } from './widget-b-first-route/widget-b-first-route.component';
+import { WidgetBSecondRouteComponent } from './widget-b-second-route/widget-b-second-route.component';
 import { Route, RouterModule } from '@angular/router';
-import { LoadableWidget } from '../widget-utils/loadable-widget';
+import { LoadableWidget } from '@angular-mfe-sandbox/widget-utils';
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './reducers';
-import { WidgetACounterComponent } from './widget-a-counter/widget-a-counter.component';
+import { WidgetBScoreboardComponent } from './widget-b-scoreboard/widget-b-scoreboard.component';
 import { MatButtonModule } from '@angular/material/button';
 import { metaReducers } from './reducers';
 import { RouterState, StoreRouterConnectingModule } from '@ngrx/router-store';
-import { CustomSerializer } from '../custom-route-serializer';
+import { CustomSerializer } from './custom-route-serializer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { environment } from '../../environments/environment';
 
 const routes: Route[] = [
   {
     path: 'first',
-    component: WidgetAFirstRouteComponent,
+    component: WidgetBFirstRouteComponent,
   },
   {
     path: 'second',
-    component: WidgetASecondRouteComponent,
+    component: WidgetBSecondRouteComponent,
   },
 ];
 
 @NgModule({
   declarations: [
-    WidgetAContainerComponent,
-    WidgetAFirstRouteComponent,
-    WidgetASecondRouteComponent,
-    WidgetACounterComponent,
+    WidgetBContainerComponent,
+    WidgetBFirstRouteComponent,
+    WidgetBSecondRouteComponent,
+    WidgetBScoreboardComponent,
   ],
-  exports: [WidgetAContainerComponent],
+  exports: [WidgetBContainerComponent],
   imports: [
     CommonModule,
     MatButtonModule,
@@ -51,11 +50,11 @@ const routes: Route[] = [
     }),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
-      logOnly: environment.production,
+      // logOnly: environment.production,
     }),
   ],
-  entryComponents: [WidgetAContainerComponent],
+  entryComponents: [WidgetBContainerComponent],
 })
-export class WidgetAModule implements LoadableWidget {
-  EntryComponent = WidgetAContainerComponent;
+export class WidgetBModule implements LoadableWidget {
+  EntryComponent = WidgetBContainerComponent;
 }

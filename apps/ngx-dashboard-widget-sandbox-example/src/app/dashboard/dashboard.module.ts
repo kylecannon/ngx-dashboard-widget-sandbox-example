@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardContainerComponent } from './dashboard-container/dashboard-container.component';
 import { Route, RouterModule } from '@angular/router';
-import { WidgetUtilsModule } from '../widget-utils/widget-utils.module';
+import { WidgetUtilsModule } from '@angular-mfe-sandbox/widget-utils';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';

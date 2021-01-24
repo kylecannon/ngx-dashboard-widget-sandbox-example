@@ -1,8 +1,6 @@
 {
-  "npmScope": "ngx-dashboard-widget-sandbox-example",
-  "affected": {
-    "defaultBase": "master"
-  },
+  "npmScope": "angular-mfe-sandbox",
+  "affected": { "defaultBase": "master" },
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",
@@ -12,32 +10,22 @@
     "tsconfig.base.json": "*"
   },
   "projects": {
-    "ngx-dashboard-widget-sandbox-example": {
-      "tags": []
-    },
-    "ngx-dashboard-widget-sandbox-example-e2e": {
-      "tags": []
-    },
-    "mfe-app": {
-      "tags": []
-    },
-    "mfe-app-e2e": {
-      "tags": [],
-      "implicitDependencies": ["mfe-app"]
-    },
-    "mfe-widget-a": {
-      "tags": []
-    },
+    "ngx-dashboard-widget-sandbox-example": { "tags": [] },
+    "ngx-dashboard-widget-sandbox-example-e2e": { "tags": [] },
+    "mfe-app": { "tags": [] },
+    "mfe-app-e2e": { "tags": [], "implicitDependencies": ["mfe-app"] },
+    "mfe-widget-a": { "tags": [] },
     "mfe-widget-a-e2e": {
       "tags": [],
       "implicitDependencies": ["mfe-widget-a"]
     },
-    "mfe-widget-b": {
-      "tags": []
-    },
+    "mfe-widget-b": { "tags": [] },
     "mfe-widget-b-e2e": {
       "tags": [],
       "implicitDependencies": ["mfe-widget-b"]
-    }
+    },
+    "widget-a": { "tags": [] },
+    "widget-b": { "tags": [] },
+    "widget-utils": { "tags": [] }
   }
 }

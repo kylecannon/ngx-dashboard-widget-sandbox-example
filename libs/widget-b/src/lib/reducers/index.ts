@@ -1,5 +1,4 @@
 import { ActionReducerMap, MetaReducer } from '@ngrx/store';
-import { environment } from '../../../environments/environment';
 import {
   scoreboardReducer,
   State as ScoreboardState,
@@ -16,6 +15,4 @@ export const reducers: ActionReducerMap<State> = {
   router: routerReducer,
 };
 
-export const metaReducers: MetaReducer<State>[] = !environment.production
-  ? []
-  : [];
+export const metaReducers: MetaReducer<State>[] = [];

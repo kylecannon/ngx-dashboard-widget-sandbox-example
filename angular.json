@@ -503,6 +503,84 @@
           }
         }
       }
+    },
+    "widget-a": {
+      "projectType": "library",
+      "root": "libs/widget-a",
+      "sourceRoot": "libs/widget-a/src",
+      "prefix": "ngx-dashboard-widget-sandbox-example",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/widget-a/tsconfig.lib.json",
+              "libs/widget-a/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/widget-a/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/widget-a"],
+          "options": {
+            "jestConfig": "libs/widget-a/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "widget-b": {
+      "projectType": "library",
+      "root": "libs/widget-b",
+      "sourceRoot": "libs/widget-b/src",
+      "prefix": "ngx-dashboard-widget-sandbox-example",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/widget-b/tsconfig.lib.json",
+              "libs/widget-b/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/widget-b/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/widget-b"],
+          "options": {
+            "jestConfig": "libs/widget-b/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "widget-utils": {
+      "projectType": "library",
+      "root": "libs/widget-utils",
+      "sourceRoot": "libs/widget-utils/src",
+      "prefix": "ngx-dashboard-widget-sandbox-example",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/widget-utils/tsconfig.lib.json",
+              "libs/widget-utils/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/widget-utils/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/widget-utils"],
+          "options": {
+            "jestConfig": "libs/widget-utils/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-dashboard-widget-sandbox-example",

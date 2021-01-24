@@ -13,7 +13,11 @@
     "target": "es2015",
     "typeRoots": ["node_modules/@types"],
     "lib": ["es2018", "dom"],
-    "paths": {},
+    "paths": {
+      "@angular-mfe-sandbox/widget-a": ["libs/widget-a/src/index.ts"],
+      "@angular-mfe-sandbox/widget-b": ["libs/widget-b/src/index.ts"],
+      "@angular-mfe-sandbox/widget-utils": ["libs/widget-utils/src/index.ts"]
+    },
     "rootDir": "."
   },
   "angularCompilerOptions": {
