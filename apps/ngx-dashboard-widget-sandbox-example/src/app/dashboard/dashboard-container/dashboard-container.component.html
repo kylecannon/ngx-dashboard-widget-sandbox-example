@@ -1,0 +1,33 @@
+<div class="sidenav">
+  <div>
+    <h3>Available Widgets:</h3>
+    <div class="widget-list">
+      <div *ngFor="let widgetKey of widgetMap | keyvalue; trackBy: trackByIdx">
+        <button
+          (click)="addWidget(widgetKey.key)"
+          mat-stroked-button
+          color="primary"
+          class="widget-button"
+        >
+          <mat-icon>add</mat-icon>
+          {{ widgetKey.key }}
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="root-state">
+    <h3>App Root State:</h3>
+    <pre>{{ store$ | async | json }}</pre>
+  </div>
+</div>
+
+<div class="widgets">
+  <ng-container *ngFor="let widget of widgets | keyvalue; trackBy: trackByKey">
+    <widget-lazy-sandbox
+      class="mat-elevation-z3"
+      [moduleName]="widget.value"
+      [id]="widget.key"
+      (widgetRemoved)="removeWidget(widget.key)"
+    ></widget-lazy-sandbox>
+  </ng-container>
+</div>

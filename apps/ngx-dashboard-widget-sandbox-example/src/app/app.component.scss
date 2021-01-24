@@ -1,0 +1,35 @@
+@import '~@angular/material/theming';
+
+@media (max-width: 720px) {
+  .desktop-toolbar {
+    display: none;
+  }
+  .content {
+    padding-top: 120px;
+  }
+}
+
+@media (min-width: 720px) {
+  .mobile-toolbar {
+    display: none;
+  }
+  .content {
+    padding-top: 80px;
+  }
+}
+
+mat-toolbar {
+  background: #673ab7;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+:host {
+  display: block;
+  height: 100%;
+  width: 100%;
+}

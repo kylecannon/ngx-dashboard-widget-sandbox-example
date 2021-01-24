@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e87dbbd3-3577-4edb-8eba-86f0c43206af/deploy-status)](https://app.netlify.com/sites/ngx-dashboard-widget-sandbox-example/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ebfd4a53-ce46-4b6b-84f6-cd63985cb9cc/deploy-status)](https://app.netlify.com/sites/ngx-dashboard-widget-sandbox-example/deploys)
 
 [Demo](https://ngx-dashboard-widget-sandbox-example.netlify.com/#/dashboard)
 

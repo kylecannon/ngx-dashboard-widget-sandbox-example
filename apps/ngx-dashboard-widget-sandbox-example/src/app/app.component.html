@@ -1,0 +1,32 @@
+<ng-template #title>
+  <span>Angular Dashboard Sandbox</span>
+</ng-template>
+<ng-template #nav>
+  <nav>
+    <a routerLink="/" mat-button>Why</a>
+    <a routerLink="/dashboard" mat-button>Example Dashboard</a>
+    <a
+      href="https://github.com/kylecannon/ngx-dashboard-widget-sandbox-example"
+      target="_blank"
+      mat-button
+      >GitHub</a
+    >
+  </nav>
+</ng-template>
+
+<mat-toolbar class="mat-elevation-z4 desktop-toolbar">
+  <ng-container [ngTemplateOutlet]="title"></ng-container>
+  <ng-container [ngTemplateOutlet]="nav"></ng-container>
+</mat-toolbar>
+<mat-toolbar class="mat-elevation-z4 mobile-toolbar">
+  <mat-toolbar-row>
+    <ng-container [ngTemplateOutlet]="title"></ng-container>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <ng-container [ngTemplateOutlet]="nav"></ng-container>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
