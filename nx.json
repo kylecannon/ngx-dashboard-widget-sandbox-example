@@ -24,6 +24,20 @@
     "mfe-app-e2e": {
       "tags": [],
       "implicitDependencies": ["mfe-app"]
+    },
+    "mfe-widget-a": {
+      "tags": []
+    },
+    "mfe-widget-a-e2e": {
+      "tags": [],
+      "implicitDependencies": ["mfe-widget-a"]
+    },
+    "mfe-widget-b": {
+      "tags": []
+    },
+    "mfe-widget-b-e2e": {
+      "tags": [],
+      "implicitDependencies": ["mfe-widget-b"]
     }
   }
 }

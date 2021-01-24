@@ -1,0 +1,20 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "ngxDashboardWidgetSandboxExample",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "ngx-dashboard-widget-sandbox-example",
+      "kebab-case"
+    ]
+  },
+  "linterOptions": {
+    "exclude": ["!**/*"]
+  }
+}
