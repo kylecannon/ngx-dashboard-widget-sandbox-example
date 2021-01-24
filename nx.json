@@ -17,6 +17,13 @@
     },
     "ngx-dashboard-widget-sandbox-example-e2e": {
       "tags": []
+    },
+    "mfe-app": {
+      "tags": []
+    },
+    "mfe-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["mfe-app"]
     }
   }
 }
