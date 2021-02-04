@@ -2,15 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router';
-import { MfeAppModule } from './mfe-app.module';
+import { WidgetAModule } from '@angular-mfe-sandbox/widget-a';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    MfeAppModule,
-    // RouterModule.forRoot([], { initialNavigation: 'enabled' }),
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, WidgetAModule],
   providers: [],
   bootstrap: [AppComponent],
 })
