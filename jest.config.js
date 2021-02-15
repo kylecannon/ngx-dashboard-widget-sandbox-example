@@ -6,5 +6,7 @@ module.exports = {
     '<rootDir>/libs/widget-a',
     '<rootDir>/libs/widget-b',
     '<rootDir>/libs/widget-utils',
+    '<rootDir>/apps/mfe-toh',
+    '<rootDir>/libs/toh',
   ],
 };

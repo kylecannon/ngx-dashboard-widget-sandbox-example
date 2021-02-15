@@ -581,6 +581,151 @@
           }
         }
       }
+    },
+    "mfe-toh": {
+      "projectType": "application",
+      "root": "apps/mfe-toh",
+      "sourceRoot": "apps/mfe-toh/src",
+      "prefix": "angular-mfe-sandbox",
+      "architect": {
+        "build": {
+          "builder": "ngx-build-plus:browser",
+          "options": {
+            "outputPath": "dist/apps/mfe-toh",
+            "index": "apps/mfe-toh/src/index.html",
+            "main": "apps/mfe-toh/src/main.ts",
+            "polyfills": "apps/mfe-toh/src/polyfills.ts",
+            "tsConfig": "apps/mfe-toh/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/mfe-toh/src/favicon.ico",
+              "apps/mfe-toh/src/assets"
+            ],
+            "styles": ["apps/mfe-toh/src/styles.css"],
+            "scripts": [],
+            "extraWebpackConfig": "apps/mfe-toh/webpack.config.js"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/mfe-toh/src/environments/environment.ts",
+                  "with": "apps/mfe-toh/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ],
+              "extraWebpackConfig": "apps/mfe-toh/webpack.prod.config.js"
+            }
+          }
+        },
+        "serve": {
+          "builder": "ngx-build-plus:dev-server",
+          "options": {
+            "browserTarget": "mfe-toh:build",
+            "extraWebpackConfig": "apps/mfe-toh/webpack.config.js",
+            "port": 4003
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "mfe-toh:build:production",
+              "extraWebpackConfig": "apps/mfe-toh/webpack.prod.config.js"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "mfe-toh:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/mfe-toh/src/**/*.ts",
+              "apps/mfe-toh/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "ngx-build-plus:karma",
+          "outputs": ["coverage/apps/mfe-toh"],
+          "options": {
+            "jestConfig": "apps/mfe-toh/jest.config.js",
+            "passWithNoTests": true,
+            "extraWebpackConfig": "apps/mfe-toh/webpack.config.js"
+          }
+        }
+      }
+    },
+    "mfe-toh-e2e": {
+      "root": "apps/mfe-toh-e2e",
+      "sourceRoot": "apps/mfe-toh-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/mfe-toh-e2e/cypress.json",
+            "tsConfig": "apps/mfe-toh-e2e/tsconfig.e2e.json",
+            "devServerTarget": "mfe-toh:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "mfe-toh:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/mfe-toh-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "toh": {
+      "projectType": "library",
+      "root": "libs/toh",
+      "sourceRoot": "libs/toh/src",
+      "prefix": "angular-mfe-sandbox",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/toh/src/**/*.ts",
+              "libs/toh/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/toh"],
+          "options": {
+            "jestConfig": "libs/toh/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-dashboard-widget-sandbox-example",
@@ -590,10 +735,14 @@
   },
   "schematics": {
     "@nrwl/angular:application": {
+      "style": "css",
+      "linter": "eslint",
       "unitTestRunner": "jest",
       "e2eTestRunner": "cypress"
     },
     "@nrwl/angular:library": {
+      "style": "css",
+      "linter": "eslint",
       "unitTestRunner": "jest"
     },
     "@nrwl/angular:component": {

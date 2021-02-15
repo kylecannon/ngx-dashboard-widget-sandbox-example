@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
 
 import { WidgetAModule } from '@angular-mfe-sandbox/widget-a';
 import { LoadableWidget } from '@angular-mfe-sandbox/widget-utils';

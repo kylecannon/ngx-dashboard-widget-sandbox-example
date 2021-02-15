@@ -14,4 +14,9 @@ export const AvailableWidgets = [
     bundle: () =>
       import('@angular-mfe-sandbox/widget-b').then((m) => m.WidgetBModule),
   },
+  {
+    name: 'Tour of Heros',
+    bundle: () =>
+      import('@angular-mfe-sandbox/toh').then((m) => m.TohAppModule),
+  },
 ];

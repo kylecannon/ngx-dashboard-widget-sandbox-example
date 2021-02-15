@@ -4,6 +4,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  // Disabled changeDetection due to the fact that the tour of heros needs Zone.js to properly work.
+  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {}

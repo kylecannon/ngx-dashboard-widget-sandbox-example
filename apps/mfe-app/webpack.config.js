@@ -28,6 +28,7 @@ module.exports = {
       remotes: {
         mfe_widget_a: 'mfe_widget_a@http://localhost:4201/remoteEntry.js',
         mfe_widget_b: 'mfe_widget_b@http://localhost:4202/remoteEntry.js',
+        mfe_toh: 'mfe_toh@http://localhost:4203/remoteEntry.js',
       },
 
       shared: {

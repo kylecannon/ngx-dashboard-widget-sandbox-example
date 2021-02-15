@@ -19,7 +19,8 @@ import { first } from 'rxjs/operators';
   selector: 'widget-lazy-sandbox',
   styleUrls: ['./widget-lazy-sandbox.component.scss'],
   templateUrl: './widget-lazy-sandbox.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  // Disabled changeDetection due to the fact that the tour of heros needs Zone.js to properly work.
+  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WidgetLazySandboxComponent implements OnChanges {
   @ViewChild('vcr', { read: ViewContainerRef }) vcr: ViewContainerRef;

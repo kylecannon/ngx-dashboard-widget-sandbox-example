@@ -13,7 +13,8 @@ interface WidgetMap {
   selector: 'app-dashboard-container',
   templateUrl: './dashboard-container.component.html',
   styleUrls: ['./dashboard-container.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  // Disabled changeDetection due to the fact that the tour of heros needs Zone.js to properly work.
+  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DashboardContainerComponent {
   readonly widgetMap = AvailableWidgets.reduce(

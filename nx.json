@@ -26,6 +26,9 @@
     },
     "widget-a": { "tags": [] },
     "widget-b": { "tags": [] },
-    "widget-utils": { "tags": [] }
+    "widget-utils": { "tags": [] },
+    "mfe-toh": { "tags": [] },
+    "mfe-toh-e2e": { "tags": [], "implicitDependencies": ["mfe-toh"] },
+    "toh": { "tags": [] }
   }
 }
