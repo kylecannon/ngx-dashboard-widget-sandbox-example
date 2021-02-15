@@ -22,7 +22,7 @@
     grid-template-rows: 1fr;
   }
   .widgets {
-    grid-template-rows: repeat(auto-fill, 550px);
+    grid-template-rows: repeat(auto-fill, 1fr);
     padding: 10px;
   }
 }
