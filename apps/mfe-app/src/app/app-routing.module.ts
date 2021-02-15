@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WhyComponent } from './why/why.component';
+import { loadRemoteModule } from '@angular-architects/module-federation';
 
 const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: () =>
-      import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
+      loadRemoteModule({
+        remoteName: 'mfe_dashboard',
+        exposedModule: './Module',
+      }).then((m) => m.MfeAppModule),
   },
   {
     path: '',

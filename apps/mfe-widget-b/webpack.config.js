@@ -9,7 +9,7 @@ sharedMappings.register(path.join(__dirname, '../../tsconfig.base.json'), [
 
 module.exports = {
   output: {
-    uniqueName: 'mfe-widget-b',
+    uniqueName: 'mfe_widget_b',
   },
   optimization: {
     // Only needed to bypass a temporary bug

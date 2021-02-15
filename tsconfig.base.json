@@ -17,7 +17,8 @@
       "@angular-mfe-sandbox/widget-a": ["libs/widget-a/src/index.ts"],
       "@angular-mfe-sandbox/widget-b": ["libs/widget-b/src/index.ts"],
       "@angular-mfe-sandbox/widget-utils": ["libs/widget-utils/src/index.ts"],
-      "@angular-mfe-sandbox/toh": ["libs/toh/src/index.ts"]
+      "@angular-mfe-sandbox/toh": ["libs/toh/src/index.ts"],
+      "@angular-mfe-sandbox/dashboard": ["libs/dashboard/src/index.ts"]
     },
     "rootDir": "."
   },

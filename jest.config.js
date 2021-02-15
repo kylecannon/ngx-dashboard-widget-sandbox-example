@@ -8,5 +8,7 @@ module.exports = {
     '<rootDir>/libs/widget-utils',
     '<rootDir>/apps/mfe-toh',
     '<rootDir>/libs/toh',
+    '<rootDir>/libs/dashboard',
+    '<rootDir>/apps/mfe-dashboard',
   ],
 };

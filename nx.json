@@ -29,6 +29,12 @@
     "widget-utils": { "tags": [] },
     "mfe-toh": { "tags": [] },
     "mfe-toh-e2e": { "tags": [], "implicitDependencies": ["mfe-toh"] },
-    "toh": { "tags": [] }
+    "toh": { "tags": [] },
+    "dashboard": { "tags": [] },
+    "mfe-dashboard": { "tags": [] },
+    "mfe-dashboard-e2e": {
+      "tags": [],
+      "implicitDependencies": ["mfe-dashboard"]
+    }
   }
 }

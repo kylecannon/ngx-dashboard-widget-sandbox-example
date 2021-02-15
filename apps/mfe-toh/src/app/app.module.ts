@@ -1,13 +1,9 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {TohAppModule, AppComponent} from '@angular-mfe-sandbox/toh';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { TohAppModule, AppComponent } from '@angular-mfe-sandbox/toh';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    TohAppModule
-  ],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, TohAppModule],
+  bootstrap: [AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}

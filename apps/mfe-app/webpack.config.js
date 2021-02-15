@@ -9,7 +9,7 @@ sharedMappings.register(path.join(__dirname, '../../tsconfig.base.json'), [
 
 module.exports = {
   output: {
-    uniqueName: 'mfe-app',
+    uniqueName: 'mfe_app',
   },
   optimization: {
     // Only needed to bypass a temporary bug
@@ -26,9 +26,10 @@ module.exports = {
 
       // For hosts (please adjust)
       remotes: {
-        mfe_widget_a: 'mfe_widget_a@http://localhost:4201/remoteEntry.js',
-        mfe_widget_b: 'mfe_widget_b@http://localhost:4202/remoteEntry.js',
-        mfe_toh: 'mfe_toh@http://localhost:4203/remoteEntry.js',
+        mfe_widget_a: 'mfe_widget_a@http://localhost:4001/remoteEntry.js',
+        mfe_widget_b: 'mfe_widget_b@http://localhost:4002/remoteEntry.js',
+        mfe_toh: 'mfe_toh@http://localhost:4003/remoteEntry.js',
+        mfe_dashboard: 'mfe_dashboard@http://localhost:4004/remoteEntry.js',
       },
 
       shared: {

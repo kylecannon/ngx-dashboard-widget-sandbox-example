@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { AvailableWidgets } from '../widget-map';
 import * as uuid from 'uuid';
 import { Store } from '@ngrx/store';
-import { State } from '../../reducers';
+import { State } from '../reducers';
 import { WidgetRegistration } from '@angular-mfe-sandbox/widget-utils';
 
 interface WidgetMap {

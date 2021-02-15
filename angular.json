@@ -194,7 +194,7 @@
           "options": {
             "browserTarget": "mfe-app:build",
             "extraWebpackConfig": "apps/mfe-app/webpack.config.js",
-            "port": 4000
+            "port": 4200
           },
           "configurations": {
             "production": {
@@ -723,6 +723,151 @@
           "options": {
             "jestConfig": "libs/toh/jest.config.js",
             "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "dashboard": {
+      "projectType": "library",
+      "root": "libs/dashboard",
+      "sourceRoot": "libs/dashboard/src",
+      "prefix": "angular-mfe-sandbox",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/dashboard/src/**/*.ts",
+              "libs/dashboard/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/dashboard"],
+          "options": {
+            "jestConfig": "libs/dashboard/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "mfe-dashboard": {
+      "projectType": "application",
+      "root": "apps/mfe-dashboard",
+      "sourceRoot": "apps/mfe-dashboard/src",
+      "prefix": "angular-mfe-sandbox",
+      "architect": {
+        "build": {
+          "builder": "ngx-build-plus:browser",
+          "options": {
+            "outputPath": "dist/apps/mfe-dashboard",
+            "index": "apps/mfe-dashboard/src/index.html",
+            "main": "apps/mfe-dashboard/src/main.ts",
+            "polyfills": "apps/mfe-dashboard/src/polyfills.ts",
+            "tsConfig": "apps/mfe-dashboard/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/mfe-dashboard/src/favicon.ico",
+              "apps/mfe-dashboard/src/assets"
+            ],
+            "styles": ["apps/mfe-dashboard/src/styles.css"],
+            "scripts": [],
+            "extraWebpackConfig": "apps/mfe-dashboard/webpack.config.js"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/mfe-dashboard/src/environments/environment.ts",
+                  "with": "apps/mfe-dashboard/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ],
+              "extraWebpackConfig": "apps/mfe-dashboard/webpack.prod.config.js"
+            }
+          }
+        },
+        "serve": {
+          "builder": "ngx-build-plus:dev-server",
+          "options": {
+            "browserTarget": "mfe-dashboard:build",
+            "extraWebpackConfig": "apps/mfe-dashboard/webpack.config.js",
+            "port": 4004
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "mfe-dashboard:build:production",
+              "extraWebpackConfig": "apps/mfe-dashboard/webpack.prod.config.js"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "mfe-dashboard:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/mfe-dashboard/src/**/*.ts",
+              "apps/mfe-dashboard/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "ngx-build-plus:karma",
+          "outputs": ["coverage/apps/mfe-dashboard"],
+          "options": {
+            "jestConfig": "apps/mfe-dashboard/jest.config.js",
+            "passWithNoTests": true,
+            "extraWebpackConfig": "apps/mfe-dashboard/webpack.config.js"
+          }
+        }
+      }
+    },
+    "mfe-dashboard-e2e": {
+      "root": "apps/mfe-dashboard-e2e",
+      "sourceRoot": "apps/mfe-dashboard-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/mfe-dashboard-e2e/cypress.json",
+            "tsConfig": "apps/mfe-dashboard-e2e/tsconfig.e2e.json",
+            "devServerTarget": "mfe-dashboard:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "mfe-dashboard:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/mfe-dashboard-e2e/**/*.{js,ts}"]
           }
         }
       }

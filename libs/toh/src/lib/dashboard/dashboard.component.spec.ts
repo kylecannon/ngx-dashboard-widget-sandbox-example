@@ -14,17 +14,17 @@ describe('DashboardComponent', () => {
   let heroService;
   let getHeroesSpy;
 
-  beforeEach(waitForAsync(() => {
-    heroService = jasmine.createSpyObj('HeroService', ['getHeroes']);
-    getHeroesSpy = heroService.getHeroes.and.returnValue(of(HEROES));
-    TestBed
-        .configureTestingModule({
-          declarations: [DashboardComponent, HeroSearchComponent],
-          imports: [RouterTestingModule.withRoutes([])],
-          providers: [{provide: HeroService, useValue: heroService}]
-        })
-        .compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      heroService = jasmine.createSpyObj('HeroService', ['getHeroes']);
+      getHeroesSpy = heroService.getHeroes.and.returnValue(of(HEROES));
+      TestBed.configureTestingModule({
+        declarations: [DashboardComponent, HeroSearchComponent],
+        imports: [RouterTestingModule.withRoutes([])],
+        providers: [{ provide: HeroService, useValue: heroService }],
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(DashboardComponent);
@@ -37,14 +37,22 @@ describe('DashboardComponent', () => {
   });
 
   it('should display "Top Heroes" as headline', () => {
-    expect(fixture.nativeElement.querySelector('h3').textContent).toEqual('Top Heroes');
+    expect(fixture.nativeElement.querySelector('h3').textContent).toEqual(
+      'Top Heroes'
+    );
   });
 
-  it('should call heroService', waitForAsync(() => {
-       expect(getHeroesSpy.calls.any()).toBe(true);
-     }));
+  it(
+    'should call heroService',
+    waitForAsync(() => {
+      expect(getHeroesSpy.calls.any()).toBe(true);
+    })
+  );
 
-  it('should display 4 links', waitForAsync(() => {
-       expect(fixture.nativeElement.querySelectorAll('a').length).toEqual(4);
-     }));
+  it(
+    'should display 4 links',
+    waitForAsync(() => {
+      expect(fixture.nativeElement.querySelectorAll('a').length).toEqual(4);
+    })
+  );
 });
